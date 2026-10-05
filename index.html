@@ -1,221 +1,41 @@
 <!doctype html>
 <html lang="tr">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="M.A.D. Çevre Mühendislik ve Danışmanlık — Bursa'da çevre danışmanlığı, çevre izin ve lisans işlemleri, mevzuat ve bildirim takibi.">
-  <meta name="theme-color" content="#0b5d4b">
-  <title>M.A.D. Çevre Mühendislik ve Danışmanlık | Bursa</title>
-  <style>
-    :root{
-      --green:#0b5d4b; --green2:#087f67; --leaf:#4aa86c;
-      --ink:#10221d; --muted:#61716b; --cream:#f5f8f5; --line:#dce7e1;
-      --white:#fff; --shadow:0 18px 50px rgba(15,48,38,.10);
-    }
-    *{box-sizing:border-box}
-    html{scroll-behavior:smooth}
-    body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--ink);background:#fff;line-height:1.65}
-    a{text-decoration:none;color:inherit}
-    .container{width:min(1120px,92%);margin:auto}
-    header{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.93);backdrop-filter:blur(12px);border-bottom:1px solid rgba(220,231,225,.8)}
-    .nav{height:78px;display:flex;align-items:center;justify-content:space-between;gap:28px}
-    .brand img{height:62px;width:auto;display:block}
-    nav{display:flex;gap:28px;align-items:center;font-size:14px;font-weight:700}
-    nav a{color:#334740}
-    nav a:hover{color:var(--green)}
-    .nav-cta{padding:11px 18px;border-radius:999px;background:var(--green);color:#fff!important}
-    .hero{position:relative;overflow:hidden;background:linear-gradient(135deg,#f5faf7 0%,#fff 56%,#eef7f1 100%);padding:88px 0 90px}
-    .hero:before{content:"";position:absolute;width:520px;height:520px;border-radius:50%;right:-230px;top:-230px;background:rgba(74,168,108,.09)}
-    .hero-grid{display:grid;grid-template-columns:1.08fr .92fr;align-items:center;gap:60px;position:relative}
-    .eyebrow{display:inline-flex;align-items:center;gap:8px;color:var(--green);font-weight:800;font-size:13px;letter-spacing:.08em;text-transform:uppercase}
-    .eyebrow:before{content:"";width:28px;height:2px;background:var(--leaf)}
-    h1{font-size:clamp(40px,5vw,64px);line-height:1.07;letter-spacing:-.045em;margin:18px 0 22px}
-    h1 span{color:var(--green)}
-    .hero p{font-size:18px;color:var(--muted);max-width:650px;margin:0 0 30px}
-    .actions{display:flex;flex-wrap:wrap;gap:12px}
-    .btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:14px 21px;border-radius:12px;font-weight:800}
-    .btn-primary{background:var(--green);color:#fff;box-shadow:0 10px 24px rgba(11,93,75,.18)}
-    .btn-secondary{border:1px solid var(--line);background:#fff;color:var(--green)}
-    .hero-card{background:#fff;border:1px solid var(--line);border-radius:28px;padding:34px;box-shadow:var(--shadow)}
-    .hero-logo{width:100%;max-width:390px;display:block;margin:0 auto 18px}
-    .mini-points{display:grid;gap:12px;margin-top:22px}
-    .mini{display:flex;gap:12px;align-items:flex-start;padding:12px;border-radius:12px;background:var(--cream);font-size:14px}
-    .check{width:24px;height:24px;border-radius:50%;display:grid;place-items:center;background:#dcefe4;color:var(--green);font-weight:900;flex:0 0 auto}
-    section{padding:92px 0}
-    .section-head{max-width:700px;margin-bottom:42px}
-    .section-head .kicker{color:var(--green);font-size:13px;font-weight:900;text-transform:uppercase;letter-spacing:.1em}
-    h2{font-size:clamp(30px,4vw,44px);line-height:1.15;letter-spacing:-.035em;margin:10px 0 14px}
-    .section-head p{color:var(--muted);font-size:17px;margin:0}
-    .services{background:var(--cream)}
-    .cards{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
-    .card{background:#fff;border:1px solid var(--line);border-radius:20px;padding:27px;transition:.2s ease;box-shadow:0 5px 20px rgba(15,48,38,.04)}
-    .card:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
-    .icon{width:48px;height:48px;border-radius:14px;background:#e5f3ea;color:var(--green);display:grid;place-items:center;font-size:23px;margin-bottom:20px}
-    .card h3{margin:0 0 10px;font-size:20px}
-    .card p{margin:0;color:var(--muted);font-size:14px}
-    .split{display:grid;grid-template-columns:.9fr 1.1fr;gap:70px;align-items:center}
-    .checklist{display:grid;gap:16px}
-    .list-item{display:flex;gap:14px;padding:17px 0;border-bottom:1px solid var(--line)}
-    .list-item:last-child{border-bottom:0}
-    .list-item strong{display:block;margin-bottom:2px}
-    .list-item span{color:var(--muted);font-size:14px}
-    .visual{border-radius:30px;min-height:440px;background:linear-gradient(145deg,#0b5d4b,#0e7b62);position:relative;overflow:hidden;padding:38px;color:#fff}
-    .visual:before,.visual:after{content:"";position:absolute;border:1px solid rgba(255,255,255,.14);border-radius:50%}
-    .visual:before{width:420px;height:420px;right:-180px;top:-110px}
-    .visual:after{width:300px;height:300px;left:-160px;bottom:-150px}
-    .visual-content{position:relative;z-index:1}
-    .visual .big{font-size:62px;font-weight:900;line-height:1;margin:10px 0}
-    .visual p{color:rgba(255,255,255,.8);max-width:420px}
-    .pill{display:inline-block;padding:8px 12px;border:1px solid rgba(255,255,255,.22);border-radius:999px;font-size:12px}
-    .process{background:#f7faf8}
-    .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
-    .step{background:#fff;border:1px solid var(--line);border-radius:18px;padding:24px}
-    .num{font-size:13px;color:var(--green);font-weight:900}
-    .step h3{font-size:18px;margin:8px 0}
-    .step p{font-size:14px;color:var(--muted);margin:0}
-    .cta{padding:70px 0;background:linear-gradient(135deg,#0b5d4b,#08735d);color:#fff}
-    .cta-inner{display:flex;justify-content:space-between;align-items:center;gap:30px}
-    .cta h2{margin:0 0 8px}
-    .cta p{margin:0;color:rgba(255,255,255,.78)}
-    .cta .btn-secondary{background:#fff;border:0}
-    footer{background:#0a211a;color:#d9e7e0;padding:45px 0 25px}
-    .footer-grid{display:grid;grid-template-columns:1.3fr .7fr .8fr;gap:45px}
-    footer h3{color:#fff;margin:0 0 12px}
-    footer p,footer a{color:#a9bbb4;font-size:14px}
-    .footer-bottom{margin-top:35px;padding-top:18px;border-top:1px solid rgba(255,255,255,.1);font-size:12px;color:#789089}
-    .mobile-menu{display:none}
-    @media(max-width:900px){
-      nav{display:none}.mobile-menu{display:block}
-      .hero-grid,.split{grid-template-columns:1fr}
-      .cards{grid-template-columns:repeat(2,1fr)}
-      .steps{grid-template-columns:repeat(2,1fr)}
-      .hero{padding:65px 0}
-    }
-    @media(max-width:600px){
-      .nav{height:70px}.brand img{height:54px}
-      .cards,.steps{grid-template-columns:1fr}
-      section{padding:65px 0}
-      .hero-card{padding:22px}
-      .cta-inner,.footer-grid{display:grid;grid-template-columns:1fr}
-      h1{font-size:42px}
-    }
-  </style>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="M.A.D. Çevre Mühendislik ve Danışmanlık — Bursa'da çevre danışmanlığı, çevre izin ve lisans süreçleri, mevzuat uyumu ve işletme yükümlülüklerinin takibi.">
+<meta name="keywords" content="Bursa çevre danışmanlık, çevre izin lisans Bursa, çevre mühendisliği, çevre danışmanlığı, çevre mevzuatı, çevre izinleri">
+<meta name="theme-color" content="#0b5f4a"><title>M.A.D. Çevre Mühendislik ve Danışmanlık | Bursa</title>
+<style>
+:root{--g:#0b5f4a;--gd:#073f34;--t:#11836b;--m:#dff1e9;--l:#5eb77b;--ink:#10221d;--muted:#65756f;--soft:#f5f8f6;--line:#dce8e2;--white:#fff;--shadow:0 24px 70px rgba(7,63,52,.11)}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--ink);background:#fff;line-height:1.65}a{text-decoration:none;color:inherit}.container{width:min(1160px,92%);margin:auto}.topbar{background:var(--gd);color:#dcebe5;font-size:12px}.topbar-inner{min-height:36px;display:flex;justify-content:flex-end;align-items:center;gap:22px}.topbar a{color:#fff}header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.94);backdrop-filter:blur(18px);border-bottom:1px solid rgba(220,232,226,.85)}.nav{height:82px;display:flex;align-items:center;justify-content:space-between;gap:30px}.brand img{height:68px;width:auto;display:block;mix-blend-mode:multiply}nav{display:flex;align-items:center;gap:30px;font-size:14px;font-weight:750}nav a{color:#334740}nav a:hover{color:var(--g)}.nav-cta,.mobile-cta{padding:11px 18px;border-radius:999px;background:var(--g);color:#fff!important}.mobile-cta{display:none}.hero{position:relative;overflow:hidden;background:radial-gradient(circle at 86% 18%,rgba(94,183,123,.18),transparent 26%),radial-gradient(circle at 10% 95%,rgba(17,131,107,.10),transparent 24%),linear-gradient(135deg,#f3f9f6 0%,#fff 60%,#eef7f2 100%);padding:92px 0 96px}.hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:70px;align-items:center}.eyebrow{display:inline-flex;align-items:center;gap:9px;color:var(--g);font-size:12px;font-weight:900;letter-spacing:.13em;text-transform:uppercase}.eyebrow:before{content:"";width:32px;height:2px;background:var(--l)}h1{font-size:clamp(43px,5.4vw,70px);line-height:1.02;letter-spacing:-.055em;margin:19px 0 24px;max-width:760px}h1 em{font-style:normal;color:var(--g)}.hero-copy{font-size:18px;color:var(--muted);max-width:680px;margin:0 0 32px}.actions{display:flex;flex-wrap:wrap;gap:12px}.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:14px 20px;border-radius:13px;font-size:14px;font-weight:850;transition:.18s ease}.btn:hover{transform:translateY(-2px)}.btn-primary{background:var(--g);color:#fff;box-shadow:0 12px 28px rgba(11,95,74,.19)}.btn-light{background:#fff;border:1px solid var(--line);color:var(--g)}.hero-panel{background:rgba(255,255,255,.83);border:1px solid rgba(220,232,226,.95);border-radius:30px;padding:34px;box-shadow:var(--shadow)}.hero-logo{width:100%;max-width:380px;display:block;margin:0 auto 22px}.panel-label{font-size:11px;font-weight:900;letter-spacing:.11em;text-transform:uppercase;color:var(--g)}.panel-title{font-size:23px;font-weight:850;line-height:1.25;margin:8px 0 18px}.trust-list{display:grid;gap:10px}.trust{display:flex;align-items:center;gap:11px;padding:11px 13px;background:var(--soft);border-radius:13px;font-size:13px;color:#3d514a}.tick{width:23px;height:23px;border-radius:50%;background:var(--m);color:var(--g);display:grid;place-items:center;font-weight:950;flex:0 0 auto}.intro{padding:72px 0 30px}.intro-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:60px;align-items:start}.section-kicker{color:var(--g);font-size:12px;font-weight:950;letter-spacing:.13em;text-transform:uppercase}h2{font-size:clamp(31px,4vw,47px);line-height:1.1;letter-spacing:-.045em;margin:9px 0 15px}.lead{font-size:17px;color:var(--muted);margin:0}.statement{font-size:22px;line-height:1.5;font-weight:720;letter-spacing:-.02em;margin:0;color:#20342e}.statement strong{color:var(--g)}section{scroll-margin-top:95px}.services{padding:70px 0 92px;background:var(--soft)}.section-head{max-width:720px;margin-bottom:40px}.section-head p{color:var(--muted);font-size:16px;margin:0}.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}.card{background:#fff;border:1px solid var(--line);border-radius:22px;padding:28px;min-height:285px;display:flex;flex-direction:column;box-shadow:0 5px 22px rgba(7,63,52,.035);transition:.2s ease}.card:hover{transform:translateY(-5px);box-shadow:var(--shadow)}.icon{width:50px;height:50px;border-radius:15px;background:var(--m);color:var(--g);display:grid;place-items:center;font-size:22px;margin-bottom:23px}.card h3{font-size:20px;line-height:1.25;margin:0 0 10px}.card p{font-size:14px;color:var(--muted);margin:0}.card-link{margin-top:auto;padding-top:20px;color:var(--g);font-size:13px;font-weight:850}.audience{padding:92px 0}.audience-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;margin-top:42px}.audience-card{border:1px solid var(--line);border-radius:24px;padding:34px;display:grid;grid-template-columns:54px 1fr;gap:20px;background:#fff}.audience-card .icon{margin:0}.audience-card h3{margin:0 0 7px;font-size:21px}.audience-card p{margin:0;color:var(--muted);font-size:14px}.process{padding:88px 0;background:var(--g);color:#fff}.process .section-kicker{color:#9be0b2}.process h2{max-width:650px}.process .lead{color:#b8d2c9}.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:48px}.step{position:relative;padding:0 24px 0 0;margin-right:24px}.step:not(:last-child):after{content:"";position:absolute;right:0;top:15px;width:1px;height:100px;background:rgba(255,255,255,.15)}.step-num{font-size:12px;font-weight:950;letter-spacing:.1em;color:#9be0b2}.step h3{font-size:18px;margin:11px 0 8px}.step p{font-size:13px;color:#b8d2c9;margin:0;max-width:220px}.why{padding:92px 0}.why-grid{display:grid;grid-template-columns:.95fr 1.05fr;gap:70px;align-items:center}.why-box{background:linear-gradient(145deg,#f0f8f4,#fff);border:1px solid var(--line);border-radius:30px;padding:42px;min-height:390px;display:flex;flex-direction:column;justify-content:flex-end;position:relative;overflow:hidden}.why-box:before{content:"";position:absolute;width:340px;height:340px;border-radius:50%;border:1px solid #cce4d8;right:-140px;top:-120px}.why-box:after{content:"";position:absolute;width:210px;height:210px;border-radius:50%;background:rgba(94,183,123,.13);right:-60px;top:-45px}.why-mark{position:relative;z-index:1;font-size:76px;line-height:.9;font-weight:950;letter-spacing:-.08em;color:var(--g)}.why-box strong{position:relative;z-index:1;font-size:22px;max-width:330px;margin-top:14px}.benefits{display:grid;gap:20px}.benefit{display:grid;grid-template-columns:42px 1fr;gap:15px;align-items:start}.benefit .tick{width:36px;height:36px}.benefit h3{font-size:17px;margin:0 0 4px}.benefit p{font-size:14px;color:var(--muted);margin:0}.faq{padding:88px 0;background:var(--soft)}.faq-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:70px}details{background:#fff;border:1px solid var(--line);border-radius:15px;padding:18px 20px;margin-bottom:10px}summary{cursor:pointer;font-weight:800}details p{color:var(--muted);font-size:14px;margin:12px 0 0}.cta{padding:70px 0;background:linear-gradient(135deg,#0b5f4a,#087761);color:#fff}.cta-inner{display:flex;justify-content:space-between;align-items:center;gap:30px}.cta h2{margin:0 0 8px;max-width:700px}.cta p{margin:0;color:#c5ddd5}.cta .btn-light{border:0}footer{background:#061f18;color:#d7e6df;padding:48px 0 24px}.footer-grid{display:grid;grid-template-columns:1.3fr .7fr .8fr;gap:50px}footer h3{color:#fff;font-size:16px;margin:0 0 13px}footer p,footer a{font-size:13px;color:#9fb5ad}footer a:hover{color:#fff}.footer-logo{height:72px;width:auto;filter:brightness(0) invert(1);opacity:.92;margin-bottom:14px}.footer-bottom{border-top:1px solid rgba(255,255,255,.09);margin-top:36px;padding-top:18px;font-size:11px;color:#6f8980;display:flex;justify-content:space-between;gap:20px}@media(max-width:950px){nav{display:none}.mobile-cta{display:inline-flex}.hero-grid,.intro-grid,.why-grid,.faq-grid{grid-template-columns:1fr}.cards{grid-template-columns:repeat(2,1fr)}.steps{grid-template-columns:repeat(2,1fr);gap:34px}.step:not(:last-child):after{display:none}.step{margin:0}}@media(max-width:620px){.topbar{display:none}.nav{height:72px}.brand img{height:58px}.hero{padding:65px 0 70px}.hero-grid{gap:40px}.hero-panel{padding:22px}h1{font-size:43px}.hero-copy{font-size:16px}.cards,.audience-grid{grid-template-columns:1fr}.audience-card{padding:25px}.steps{grid-template-columns:1fr}section{scroll-margin-top:78px}.cta-inner,.footer-grid{display:grid;grid-template-columns:1fr}.footer-bottom{display:block}.footer-bottom span{display:block;margin-top:7px}}
+</style>
 </head>
 <body>
-<header>
-  <div class="container nav">
-    <a class="brand" href="#"><img src="assets/logo.png" alt="M.A.D. Çevre Mühendislik ve Danışmanlık"></a>
-    <nav>
-      <a href="#hizmetler">Hizmetler</a>
-      <a href="#yaklasim">Yaklaşımımız</a>
-      <a href="#surec">Süreç</a>
-      <a href="#iletisim" class="nav-cta">İletişim</a>
-    </nav>
-    <a class="mobile-menu nav-cta" href="#iletisim">İletişim</a>
-  </div>
-</header>
-
+<div class="topbar"><div class="container topbar-inner"><span>Bursa ve çevresinde çevre danışmanlığı</span><a href="tel:+905305910928">0530 591 09 28</a><a href="mailto:madcevre@gmail.com">madcevre@gmail.com</a></div></div>
+<header><div class="container nav"><a class="brand" href="#anasayfa"><img src="assets/logo.png" alt="M.A.D. Çevre Mühendislik ve Danışmanlık"></a><nav><a href="#hizmetler">Hizmetler</a><a href="#kimler">Kimler İçin?</a><a href="#surec">Çalışma Sürecimiz</a><a href="#sss">SSS</a><a class="nav-cta" href="#iletisim">İletişim</a></nav><a class="mobile-cta" href="#iletisim">İletişim</a></div></header>
 <main>
-  <section class="hero">
-    <div class="container hero-grid">
-      <div>
-        <div class="eyebrow">Bursa • Çevre Danışmanlığı</div>
-        <h1>Çevre mevzuatında <span>güvenilir</span> çözüm ortağınız.</h1>
-        <p>M.A.D. Çevre Mühendislik ve Danışmanlık; üretim tesisleri, mevcut işletmeler ve yeni yatırımlar için çevre danışmanlığı, izin-lisans ve mevzuat uyum süreçlerinde profesyonel destek sunar.</p>
-        <div class="actions">
-          <a class="btn btn-primary" href="https://wa.me/905305910928" target="_blank" rel="noopener">WhatsApp'tan Ulaşın →</a>
-          <a class="btn btn-secondary" href="#hizmetler">Hizmetlerimizi İnceleyin</a>
-        </div>
-      </div>
-      <div class="hero-card">
-        <img class="hero-logo" src="assets/logo.png" alt="M.A.D. Çevre logosu">
-        <div class="mini-points">
-          <div class="mini"><span class="check">✓</span><div><strong>Çevre danışmanlığı</strong><br>İşletmenizin çevresel yükümlülüklerinin takibi.</div></div>
-          <div class="mini"><span class="check">✓</span><div><strong>İzin ve lisans süreçleri</strong><br>Başvuru, belge ve süreç yönetimi desteği.</div></div>
-          <div class="mini"><span class="check">✓</span><div><strong>Mevzuat uyumu</strong><br>Periyodik kontroller ve bildirim takibi.</div></div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="hizmetler" class="services">
-    <div class="container">
-      <div class="section-head">
-        <div class="kicker">Hizmetlerimiz</div>
-        <h2>İşletmenizin çevre süreçlerini birlikte yönetelim.</h2>
-        <p>Yeni yatırım aşamasından mevcut tesisin rutin yükümlülüklerine kadar çevre mevzuatı kapsamındaki ihtiyaçlarınıza çözüm üretiyoruz.</p>
-      </div>
-      <div class="cards">
-        <article class="card"><div class="icon">🌿</div><h3>Çevre Danışmanlığı</h3><p>İşletmenizin çevre mevzuatı kapsamındaki yükümlülüklerini değerlendiriyor ve düzenli danışmanlık desteği sağlıyoruz.</p></article>
-        <article class="card"><div class="icon">📄</div><h3>Çevre İzin & Lisans</h3><p>Gerekli izin ve lisans süreçlerinin belirlenmesi, belge hazırlığı ve başvuru süreçlerinde destek oluyoruz.</p></article>
-        <article class="card"><div class="icon">🏭</div><h3>Mevcut İşletmeler</h3><p>Aylık kontroller, yıllık bildirimler ve işletmenizin tabi olduğu çevresel yükümlülüklerin takibini yapıyoruz.</p></article>
-        <article class="card"><div class="icon">🏗️</div><h3>Yeni Yatırımlar</h3><p>Yeni tesis veya işletme kurmadan önce çevresel yükümlülüklerinizi belirliyor ve süreçlerinizi planlıyoruz.</p></article>
-      </div>
-    </div>
-  </section>
-
-  <section id="yaklasim">
-    <div class="container split">
-      <div>
-        <div class="section-head">
-          <div class="kicker">Yaklaşımımız</div>
-          <h2>Sadece evrak değil, uygulanabilir çözüm.</h2>
-          <p>Çevre mevzuatındaki yükümlülükleri işletmenin gerçek faaliyetleriyle birlikte değerlendiriyor; karşılaşılabilecek sorunları önceden görmeye ve çözmeye odaklanıyoruz.</p>
-        </div>
-        <div class="checklist">
-          <div class="list-item"><span class="check">✓</span><div><strong>Mevzuata uyum</strong><span>İşletmenizin tabi olduğu yükümlülüklerin belirlenmesi ve takibi.</span></div></div>
-          <div class="list-item"><span class="check">✓</span><div><strong>Düzenli takip</strong><span>Aylık ve periyodik kontrollerle süreçlerin aksamasını önleme.</span></div></div>
-          <div class="list-item"><span class="check">✓</span><div><strong>Çözüm odaklı danışmanlık</strong><span>Tespit edilen eksiklikler için uygulanabilir yol haritaları.</span></div></div>
-        </div>
-      </div>
-      <div class="visual">
-        <div class="visual-content">
-          <span class="pill">BURSA & ÇEVRESİ</span>
-          <div class="big">M.A.D.</div>
-          <h3>Çevre Mühendislik<br>& Danışmanlık</h3>
-          <p>İşletmenizin çevre mevzuatıyla ilgili ihtiyaçlarını birlikte değerlendirelim.</p>
-          <a class="btn btn-secondary" href="tel:+905305910928">0530 591 09 28</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="surec" class="process">
-    <div class="container">
-      <div class="section-head">
-        <div class="kicker">Nasıl Çalışıyoruz?</div>
-        <h2>İhtiyacınızı belirliyor, süreci birlikte yönetiyoruz.</h2>
-      </div>
-      <div class="steps">
-        <div class="step"><div class="num">01 — TESPİT</div><h3>İşletmenizi Tanıyoruz</h3><p>Faaliyet alanınızı ve mevcut durumunuzu değerlendiriyoruz.</p></div>
-        <div class="step"><div class="num">02 — PLANLAMA</div><h3>Yükümlülükleri Belirliyoruz</h3><p>Tabi olduğunuz çevresel izin, bildirim ve takip süreçlerini ortaya koyuyoruz.</p></div>
-        <div class="step"><div class="num">03 — UYGULAMA</div><h3>Süreci Yönetiyoruz</h3><p>Başvuru, belge, bildirim ve danışmanlık süreçlerinde yanınızda oluyoruz.</p></div>
-        <div class="step"><div class="num">04 — TAKİP</div><h3>Uyumu Sürdürüyoruz</h3><p>Periyodik kontrollerle yükümlülüklerin düzenli şekilde takip edilmesini sağlıyoruz.</p></div>
-      </div>
-    </div>
-  </section>
-
-  <section id="iletisim" class="cta">
-    <div class="container cta-inner">
-      <div>
-        <h2>Çevre mevzuatıyla ilgili bir sorunuz mu var?</h2>
-        <p>İşletmenizin durumunu birlikte değerlendirelim.</p>
-      </div>
-      <div class="actions">
-        <a class="btn btn-secondary" href="https://wa.me/905305910928" target="_blank" rel="noopener">WhatsApp</a>
-        <a class="btn btn-secondary" href="mailto:madcevre@gmail.com">E-posta Gönder</a>
-      </div>
-    </div>
-  </section>
+<section id="anasayfa" class="hero"><div class="container hero-grid"><div><div class="eyebrow">Bursa • Çevre Mühendislik & Danışmanlık</div><h1>İşletmeniz için <em>çevre mevzuatını</em> anlaşılır hale getiriyoruz.</h1><p class="hero-copy">M.A.D. Çevre; yeni yatırımlardan mevcut üretim tesislerine kadar çevre izin ve lisans süreçleri, çevre danışmanlığı ve mevzuat kapsamındaki yükümlülüklerin takibinde işletmelere çözüm ortağı olur.</p><div class="actions"><a class="btn btn-primary" href="https://wa.me/905305910928" target="_blank" rel="noopener">WhatsApp'tan Görüşün →</a><a class="btn btn-light" href="#hizmetler">Hizmetleri İnceleyin</a></div></div><div class="hero-panel"><img class="hero-logo" src="assets/logo.png" alt="M.A.D. Çevre"><div class="panel-label">İşletmeniz için</div><div class="panel-title">Doğru yükümlülüğü belirleyin, süreci zamanında yönetin.</div><div class="trust-list"><div class="trust"><span class="tick">✓</span> Çevre danışmanlığı ve mevzuat takibi</div><div class="trust"><span class="tick">✓</span> Çevre izin ve lisans süreçleri</div><div class="trust"><span class="tick">✓</span> Aylık kontroller ve yıllık bildirimler</div><div class="trust"><span class="tick">✓</span> Yeni yatırım öncesi çevresel değerlendirme</div></div></div></div></section>
+<section class="intro"><div class="container intro-grid"><div><div class="section-kicker">M.A.D. Çevre</div><h2>Çevreyle ilgili yükümlülüklerinizi şansa bırakmayın.</h2></div><p class="statement">Bir işletmenin çevre mevzuatı kapsamındaki sorumlulukları faaliyet alanına göre değişir. <strong>İhtiyacınızı belirliyor, gerekli süreçleri planlıyor ve takibini yapıyoruz.</strong></p></div></section>
+<section id="hizmetler" class="services"><div class="container"><div class="section-head"><div class="section-kicker">Hizmetlerimiz</div><h2>İşletmenizin ihtiyacına göre çözüm.</h2><p>Tek bir başvuruya değil, işletmenizin çevre mevzuatı kapsamındaki bütün sürecine bakıyoruz.</p></div><div class="cards">
+<article class="card"><div class="icon">🌿</div><h3>Çevre Danışmanlığı</h3><p>İşletmenizin faaliyetlerini çevre mevzuatı açısından değerlendiriyor; yükümlülüklerin düzenli takibi için danışmanlık sunuyoruz.</p><div class="card-link">Detaylı değerlendirme →</div></article>
+<article class="card"><div class="icon">📄</div><h3>Çevre İzin & Lisans</h3><p>İşletmenizin tabi olduğu izin ve lisans süreçlerinin belirlenmesi, gerekli belgelerin hazırlanması ve başvuru süreçlerinde destek sağlıyoruz.</p><div class="card-link">Süreci birlikte planlayalım →</div></article>
+<article class="card"><div class="icon">🏭</div><h3>Mevcut İşletmeler</h3><p>Aylık kontroller, yıllık bildirimler ve çevre mevzuatı kapsamındaki yükümlülüklerin düzenli olarak takip edilmesine yardımcı oluyoruz.</p><div class="card-link">İşletmenizi değerlendirelim →</div></article>
+<article class="card"><div class="icon">🏗️</div><h3>Yeni Yatırımlar</h3><p>Yeni tesis veya üretim faaliyetine başlamadan önce çevresel yükümlülükleri belirliyor ve izin süreçlerinin planlanmasına destek oluyoruz.</p><div class="card-link">Yatırımınızı konuşalım →</div></article>
+</div></div></section>
+<section id="kimler" class="audience"><div class="container"><div class="section-head"><div class="section-kicker">Kimler İçin?</div><h2>İster yeni yatırım, ister yıllardır çalışan bir tesis.</h2><p>Çevre mevzuatıyla ilgili hangi aşamada olduğunuz önemli değil. Önce mevcut durumunuzu anlayalım.</p></div><div class="audience-grid">
+<div class="audience-card"><div class="icon">🏗️</div><div><h3>Yeni işletme / yatırım</h3><p>Yeni bir üretim tesisi kuruyor veya mevcut faaliyet alanınızı büyütüyorsanız, çevresel yükümlülüklerinizi yatırımın başında değerlendirelim.</p></div></div>
+<div class="audience-card"><div class="icon">🏭</div><div><h3>Faaliyette olan işletme</h3><p>İşletmeniz zaten çalışıyorsa; izin, bildirim, kontrol ve diğer çevresel yükümlülüklerinizi düzenli şekilde takip edelim.</p></div></div>
+<div class="audience-card"><div class="icon">🔎</div><div><h3>Mevzuatını netleştirmek isteyenler</h3><p>“Benim işletmem hangi çevre yükümlülüklerine tabi?” sorusunun cevabını faaliyetiniz üzerinden birlikte değerlendirelim.</p></div></div>
+<div class="audience-card"><div class="icon">⚙️</div><div><h3>Süreçlerini düzenlemek isteyenler</h3><p>Takibi dağınık olan çevre süreçlerinizi daha düzenli ve kontrollü bir yapıya kavuşturmak için destek olalım.</p></div></div>
+</div></div></section>
+<section id="surec" class="process"><div class="container"><div class="section-kicker">Çalışma Sürecimiz</div><h2>Önce sizi dinliyor, sonra süreci planlıyoruz.</h2><p class="lead">Her işletmenin faaliyeti ve çevresel yükümlülüğü farklıdır. Bu nedenle danışmanlığı işletmenize göre şekillendiriyoruz.</p><div class="steps"><div class="step"><div class="step-num">01 — TESPİT</div><h3>İşletmenizi tanıyoruz</h3><p>Faaliyet alanınızı, kapasitenizi ve mevcut durumunuzu değerlendiriyoruz.</p></div><div class="step"><div class="step-num">02 — BELİRLEME</div><h3>Yükümlülükleri çıkarıyoruz</h3><p>Tabi olduğunuz izin, lisans, bildirim ve takip süreçlerini belirliyoruz.</p></div><div class="step"><div class="step-num">03 — UYGULAMA</div><h3>Süreci yönetiyoruz</h3><p>Gerekli başvuru, belge ve danışmanlık süreçlerinde yanınızda oluyoruz.</p></div><div class="step"><div class="step-num">04 — TAKİP</div><h3>Sürekliliği sağlıyoruz</h3><p>Periyodik kontroller ve takip çalışmalarıyla sürecin devamlılığını destekliyoruz.</p></div></div></div></section>
+<section class="why"><div class="container why-grid"><div class="why-box"><div class="why-mark">M.A.D.</div><strong>Çevre mevzuatını işletmenizin diliyle anlatıyor, uygulanabilir çözümlere dönüştürüyoruz.</strong></div><div><div class="section-kicker">Neden M.A.D.?</div><h2>Sadece evrak değil, çözüm odaklı danışmanlık.</h2><div class="benefits"><div class="benefit"><span class="tick">✓</span><div><h3>İşletmenize özel değerlendirme</h3><p>Genel bir kontrol listesi yerine faaliyetinizin gerektirdiği çevresel yükümlülüklere odaklanıyoruz.</p></div></div><div class="benefit"><span class="tick">✓</span><div><h3>Düzenli takip</h3><p>Yıllık ve periyodik yükümlülüklerin unutulmaması için süreçlerin düzenli takibini destekliyoruz.</p></div></div><div class="benefit"><span class="tick">✓</span><div><h3>Anlaşılır iletişim</h3><p>Teknik ve mevzuat bilgisini işletme sahibinin ve yöneticinin karar verebileceği şekilde aktarmayı hedefliyoruz.</p></div></div></div></div></div></section>
+<section id="sss" class="faq"><div class="container faq-grid"><div><div class="section-kicker">Sık Sorulan Sorular</div><h2>Nereden başlayacağınızı bilmiyor musunuz?</h2><p class="lead">İlk görüşmede işletmenizin faaliyetini ve mevcut durumunu konuşarak hangi konuların değerlendirilmesi gerektiğini birlikte belirleyebiliriz.</p></div><div>
+<details open><summary>Yeni bir üretim tesisi kuruyorum. Ne yapmalıyım?</summary><p>Yatırımın niteliğine göre çevre mevzuatı kapsamındaki yükümlülükler değişebilir. En sağlıklısı, faaliyete başlamadan önce tesisinizi ve prosesinizi değerlendirerek gerekli süreçleri baştan planlamaktır.</p></details>
+<details><summary>Mevcut işletmem için çevre danışmanlığı neden gerekli olabilir?</summary><p>Faaliyetinizin tabi olduğu yükümlülüklerin düzenli takibi; bildirim, kontrol ve izin süreçlerinin zamanında yürütülmesine yardımcı olur.</p></details>
+<details><summary>Çevre izin veya lisans gerekip gerekmediğini nasıl öğrenebilirim?</summary><p>Bu konu işletmenin faaliyet konusu, kapasitesi ve ilgili çevresel unsurları gibi faktörlere bağlıdır. İşletmenizin durumunu değerlendirerek hangi süreçlerin gündeme geldiğini birlikte inceleyebiliriz.</p></details>
+<details><summary>Bursa dışında hizmet veriyor musunuz?</summary><p>M.A.D. Çevre'nin ofisi Bursa'dadır. Hizmet kapsamı ve çalışma şekli için doğrudan bizimle iletişime geçebilirsiniz.</p></details>
+</div></div></section>
+<section id="iletisim" class="cta"><div class="container cta-inner"><div><div class="section-kicker" style="color:#9be0b2">İletişim</div><h2>İşletmenizin çevre süreçlerini birlikte değerlendirelim.</h2><p>Telefon veya WhatsApp üzerinden bize ulaşabilirsiniz.</p></div><div class="actions"><a class="btn btn-light" href="https://wa.me/905305910928" target="_blank" rel="noopener">WhatsApp'tan Yazın</a><a class="btn btn-light" href="tel:+905305910928">0530 591 09 28</a><a class="btn btn-light" href="mailto:madcevre@gmail.com">E-posta</a></div></div></section>
 </main>
-
-<footer>
-  <div class="container footer-grid">
-    <div><h3>M.A.D. Çevre Mühendislik ve Danışmanlık</h3><p>Bursa'da çevre danışmanlığı, çevre izin ve lisans süreçleri ve çevre mevzuatına uyum hizmetleri.</p></div>
-    <div><h3>İletişim</h3><p><a href="tel:+905305910928">0530 591 09 28</a><br><a href="mailto:madcevre@gmail.com">madcevre@gmail.com</a></p></div>
-    <div><h3>Hızlı Menü</h3><p><a href="#hizmetler">Hizmetler</a><br><a href="#yaklasim">Yaklaşımımız</a><br><a href="#iletisim">İletişim</a></p></div>
-  </div>
-  <div class="container footer-bottom">© 2026 M.A.D. Çevre Mühendislik ve Danışmanlık. Tüm hakları saklıdır.</div>
-</footer>
-</body>
-</html>
+<footer><div class="container footer-grid"><div><img class="footer-logo" src="assets/logo.png" alt="M.A.D. Çevre"><p>Bursa'da çevre danışmanlığı, çevre izin ve lisans süreçleri ve çevre mevzuatına uyum konularında işletmelere çözüm odaklı danışmanlık.</p></div><div><h3>Hızlı Menü</h3><p><a href="#hizmetler">Hizmetler</a><br><a href="#kimler">Kimler İçin?</a><br><a href="#surec">Çalışma Sürecimiz</a><br><a href="#sss">Sık Sorulan Sorular</a></p></div><div><h3>İletişim</h3><p><a href="tel:+905305910928">0530 591 09 28</a><br><a href="mailto:madcevre@gmail.com">madcevre@gmail.com</a><br>Bursa, Türkiye</p></div></div><div class="container footer-bottom"><span>© 2026 M.A.D. Çevre Mühendislik ve Danışmanlık</span><span>Çevre Mühendislik & Danışmanlık</span></div></footer>
+</body></html>
