@@ -1,1 +1,1 @@
-const b=document.querySelector('.hamb'),n=document.querySelector('.links');if(b&&n)b.addEventListener('click',()=>n.classList.toggle('open'));document.querySelectorAll('.links a').forEach(a=>a.addEventListener('click',()=>n?.classList.remove('open')));
+document.addEventListener('DOMContentLoaded',()=>{const b=document.querySelector('.hamb'),n=document.querySelector('.links');if(b&&n)b.addEventListener('click',()=>n.classList.toggle('open'));});
