@@ -1,29 +1,16 @@
-# M.A.D. Çevre, Mühendislik ve Danışmanlık — v3
+# M.A.D. Çevre, Mühendislik ve Danışmanlık — Web Sitesi V4.1
 
-GitHub Pages için hazırlanmış statik kurumsal web sitesi.
+GitHub Pages için hazır statik web sitesi. V4.1 ile gerçek M.A.D. logosu temizlenmiş şeffaf PNG olarak siteye dahil edildi ve ana sayfa daha premium kurumsal tasarıma güncellendi.
 
-## GitHub'a yükleme
-1. ZIP'i açın.
-2. Repository kök dizinindeki mevcut site dosyalarının yerine bu dosyaları yükleyin.
-3. **Mevcut `assets/logo.png` dosyanız varsa onu silmeyin.** Bu paket, yükleme sırasında logoyu kaybetmemeniz için `assets/logo.svg` adlı bir fallback marka işareti içerir. İsterseniz mevcut gerçek logonuzu `assets/logo.png` olarak tutup HTML'deki `logo.svg` referanslarını `logo.png` yapabilirsiniz.
-4. Commit changes.
-5. GitHub Pages mevcut repository üzerinden otomatik yayınlanmaya devam eder.
-
-## Sayfalar
-- Ana sayfa
-- Hakkımızda
-- Hizmetler
-- Yeni Yatırım
-- Bursa Çevre Danışmanlığı
-- Çevre İzin ve Lisans
-- Çevre Mevzuatı
-- Çevre İzni Nedir?
-- SSS
-- İletişim
-- Gizlilik
+## Yayına alma
+1. ZIP içeriğini GitHub repository köküne yükleyin.
+2. Mevcut dosyaların üzerine yazın.
+3. GitHub Pages birkaç dakika içinde güncellenir.
 
 ## İletişim
-0530 591 09 28
-madcevre@gmail.com
+- 0530 591 09 28
+- madcevre@gmail.com
+- WhatsApp: https://wa.me/905305910928
 
-Not: Mevzuat içerikleri genel bilgilendirme amacıyla hazırlanmıştır. İşletmeye özel hukuki/teknik değerlendirme güncel mevzuat üzerinden ayrıca yapılmalıdır.
+## Not
+Özel alan adı bağlayacaksanız GitHub Pages > Settings > Pages > Custom domain bölümünden alan adınızı tanımlayın. DNS kayıtlarını alan adı sağlayıcınız üzerinden yapılandırın.
