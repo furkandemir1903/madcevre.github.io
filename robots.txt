@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://furkandemir1903.github.io/madcevre.github.io/sitemap.xml
